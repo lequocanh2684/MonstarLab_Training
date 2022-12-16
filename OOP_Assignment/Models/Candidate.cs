@@ -14,7 +14,7 @@ namespace OOP_Assignment.Models
 		{
 		}
 
-		public Candidate(string id, string name, string dob, float mathMark, float literatureMark, float englishMark)
+		public Candidate(string id, string? name, string? dob, float mathMark, float literatureMark, float englishMark)
 		{
 			this.Id = id;
 			this.Name = name;
