@@ -53,7 +53,7 @@ namespace OOP_Assignment.Services
 			try
 			{
 				this.studentsList.RemoveAt(FindById(id));
-				Console.WriteLine("Deleted successfully");
+				Console.WriteLine("*Deleted successfully*");
 			}catch(Exception ex)
 			{
 				Console.WriteLine(ex.Message);
@@ -69,10 +69,12 @@ namespace OOP_Assignment.Services
 				{
 					case "GPA":
 						this.studentsList = this.studentsList.OrderBy(x => x.GPA).ToList();
+						Console.WriteLine("Sorted by GPA in ascending, use option 6 to see result");
 						break;
 					case "Name":
 						this.studentsList = this.studentsList.OrderBy(x => x.Name).ToList();
-						break;
+                        Console.WriteLine("Sorted by Name in ascending, use option 6 to see result");
+                        break;
 				}
 			}catch(Exception ex)
 			{
@@ -105,7 +107,7 @@ namespace OOP_Assignment.Services
 						"\n5. Sort students by name" +
 						"\n6. Show students" +
 						"\n0. Exit" +
-						"\nNhap lua chon: ");
+						"\nEnter your selectin: ");
 					int select = Convert.ToInt32(Console.ReadLine());
 					switch (select)
 					{
@@ -113,11 +115,13 @@ namespace OOP_Assignment.Services
 							AddStudent();
 							break;
 						case 2:
+							Console.Write("Enter student's id needed to change: ");
 							string? idEdit = Console.ReadLine();
 							EditStudent(idEdit);
 							break;
 						case 3:
-							string? idDelete = Console.ReadLine();
+                            Console.Write("Enter student's id needed to delete: ");
+                            string? idDelete = Console.ReadLine();
 							DeleteStudent(idDelete);
 							break;
 						case 4:
@@ -132,8 +136,9 @@ namespace OOP_Assignment.Services
 						case 0:
 							break;
 					}
-					Console.WriteLine("\nBack to menu or not" +
+					Console.WriteLine("\nBack to menu or not?" +
 						"\n1. Yes, 2. No");
+					Console.Write("Enter your Selection: ");
 					option = Convert.ToInt32(Console.ReadLine());
 				} while (option == 1);
 			}catch (Exception ex)
