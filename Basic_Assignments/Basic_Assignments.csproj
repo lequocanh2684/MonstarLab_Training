@@ -10,7 +10,4 @@
   <ItemGroup>
     <None Remove="Condition_Assignments\" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Condition_Assignments\" />
-  </ItemGroup>
 </Project>

@@ -1,10 +1,10 @@
 ﻿using OOP_Assignment.Services;
 
-PhanSoService phanSoService = new();
+//IOOPAssignments phanSoService = new PhanSoService();
 //phanSoService.Display();
 
-TestCandidate testCandidate = new();
+//IOOPAssignments testCandidate = new TestCandidate();
 //testCandidate.Display();
 
-StudentService studentService = new();
-studentService.Menu();
+//IOOPAssignments studentService = new StudentService();
+//studentService.Display();
