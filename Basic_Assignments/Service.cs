@@ -68,4 +68,28 @@ internal class Service
         }
     }
 
+    public static int[] InputIntArray()
+    {
+        Console.Write("Nhap so tu nhien n: ");
+        var n = Convert.ToInt32(Console.ReadLine());
+        int[] newArray = new int[n];
+        for (int i = 0; i < newArray.Length; i++)
+        {
+            Console.Write($"a[{i}]=");
+            newArray[i] = int.Parse(Console.ReadLine());
+        }
+        return newArray;
+    }
+
+    public static string[] InputMssvArray()
+    {
+        Console.WriteLine("Nhap ma so sinh vien: ");
+        string[] newArray = new string[5];
+        for(int i = 0; i < newArray.Length; i++)
+        {
+            Console.Write($"Ma so sinh vien thu {i + 1}: ");
+            newArray[i] = Console.ReadLine();
+        }
+        return newArray;
+    }
 }

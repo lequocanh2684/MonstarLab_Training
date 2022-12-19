@@ -8,5 +8,10 @@ namespace Basic_Assignments.Array
 {
     internal class Bai12
     {
+        public void Display()
+        {
+            int[] newArray = Service.InputIntArray();
+            Console.WriteLine($"Phan tu co gia tri lon nhat la: {newArray.Max()}");
+        }
     }
 }
